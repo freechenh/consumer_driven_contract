@@ -1,0 +1,55 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "interactions": [
+    {
+      "description": "a request for UserA",
+      "providerState": "UserA exists and is not an administrator",
+      "request": {
+        "method": "get",
+        "path": "/users/UserA"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "username": "UserA",
+          "id": 123,
+          "groups": [
+            "Editors"
+          ]
+        }
+      }
+    },
+    {
+      "description": "a request for UserB",
+      "providerState": "UserB exists and is not an administrator",
+      "request": {
+        "method": "get",
+        "path": "/users/UserB"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "username": "UserB",
+          "id": 124,
+          "groups": [
+            "Editors"
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
